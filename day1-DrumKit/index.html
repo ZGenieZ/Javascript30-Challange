@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Piano</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="keys">
+      <div data-key="65" class="key">
+        <div class="textbox">
+          <kbd>A</kbd>
+          <span class="sound">도</span>
+        </div>
+      </div>
+      <div data-key="83" class="key">
+        <div class="textbox">
+          <kbd>S</kbd>
+          <span class="sound">레</span>
+        </div>
+      </div>
+      <div data-key="68" class="key">
+        <div class="textbox">
+          <kbd>D</kbd>
+          <span class="sound">미</span>
+        </div>
+      </div>
+      <div data-key="70" class="key">
+        <div class="textbox">
+          <kbd>F</kbd>
+          <span class="sound">파</span>
+        </div>
+      </div>
+      <div data-key="71" class="key">
+        <div class="textbox">
+          <kbd>G</kbd>
+          <span class="sound">솔</span>
+        </div>
+      </div>
+      <div data-key="72" class="key">
+        <div class="textbox">
+          <kbd>H</kbd>
+          <span class="sound">라</span>
+        </div>
+      </div>
+      <div data-key="74" class="key">
+        <div class="textbox">
+          <kbd>J</kbd>
+          <span class="sound">시</span>
+        </div>
+      </div>
+      <div data-key="75" class="key">
+        <div class="textbox">
+          <kbd>K</kbd>
+          <span class="sound">도</span>
+        </div>
+      </div>
+    </div>
+    <div id="title">
+      <span class="text">Day 1 - Practice Piano</span>
+    </div>
+    <footer>
+      <p><a href="../">Back to List</a></p>
+      <p><a href="https://javascript30.com/">Javascript30</a></p>
+    </footer>
+    <audio data-key="65" src="./sounds/sound1.mp3"></audio>
+    <audio data-key="83" src="./sounds/sound2.mp3"></audio>
+    <audio data-key="68" src="./sounds/sound3.mp3"></audio>
+    <audio data-key="70" src="./sounds/sound4.mp3"></audio>
+    <audio data-key="71" src="./sounds/sound5.mp3"></audio>
+    <audio data-key="72" src="./sounds/sound6.mp3"></audio>
+    <audio data-key="74" src="./sounds/sound7.mp3"></audio>
+    <audio data-key="75" src="./sounds/sound8.mp3"></audio>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
