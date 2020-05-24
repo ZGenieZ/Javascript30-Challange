@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS + CSS Clock</title>
+  </head>
+  <body>
+    <h1>day 2 - Clock</h1>
+    <div class="clock">
+      <div class="clock-face">
+        <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+      </div>
+    </div>
+    <footer>
+      <p><a href="../">Back to List</a></p>
+      <p><a href="https://javascript30.com/">Javascript30</a></p>
+    </footer>
+    <style>
+      html {
+        background: #018ded url(https://unsplash.it/1500/1000?image=881&blur=5);
+        background-size: cover;
+        font-family: "helvetica neue";
+        text-align: center;
+        font-size: 10px;
+      }
+
+      body {
+        margin: 0;
+        font-size: 2rem;
+        display: flex;
+        flex: 1;
+        min-height: 100vh;
+        align-items: center;
+      }
+      h1 {
+        color: black;
+        text-shadow: 4px 0 white;
+        position: absolute;
+        top: 20px;
+        left: 585px;
+        font-size: 50px;
+        font-style: italic;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      .clock {
+        width: 30rem;
+        height: 30rem;
+        border: 20px solid white;
+        border-radius: 50%;
+        margin: 50px auto;
+        position: relative;
+        padding: 2rem;
+        box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+          inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .clock-face {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: translateY(
+          -3px
+        ); /* account for the height of the clock hands */
+      }
+
+      .hand {
+        width: 50%;
+        height: 6px;
+        background: black;
+        position: absolute;
+        top: 50%;
+        transform: rotate(90deg);
+        transform-origin: 100%;
+        transition: all 0.05s;
+      }
+
+      .second-hand {
+        height: 2px;
+      }
+
+      .hour-hand {
+        height: 8px;
+      }
+      footer {
+        text-align: center;
+        position: relative;
+        top: 260px;
+        right: 790px;
+      }
+      p {
+        color: white;
+        font-weight: 900;
+        font-size: 2rem;
+      }
+    </style>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
