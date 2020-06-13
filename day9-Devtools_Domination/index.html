@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Console Tricks!</title>
+  </head>
+  <body>
+    <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+    <script>
+      const dogs = [
+        { name: "Snickers", age: 2 },
+        { name: "hugo", age: 8 },
+      ];
+
+      function makeGreen() {
+        const p = document.querySelector("p");
+        p.style.color = "#BADA55";
+        p.style.fontSize = "50px";
+      }
+
+      // Regular(기본 콘솔 출력)
+      console.log("hello world!");
+
+      // Interpolated(%s에 console.log 두번째 인자 문자열 삽입)
+      console.log("hello %s", "javascript!");
+
+      // Styled(%c 뒤에 오는 문자열을 console.log 두번째 인자의 style 문법으로 꾸밀 수 있음)
+      console.log("%c Javascript30!", "background:red; font-size:30px");
+
+      // warning!(경고창이 노랑색으로 표시)
+      console.warn("Warning!");
+
+      // Error(에러창이 빨강색으로 표시)
+      console.error("error!");
+
+      // Info(파란 느낌표로 정보 표시)
+      console.info("javascript30 is great course!");
+
+      // Testing(첫번째 인자의 결과가 false일 경우 두번째 인자의 문자열을 에러창으로 표시)
+      console.assert(1 === 2, "result is wrong!");
+
+      // clearing(콘솔 창 깨끗이)
+
+      // Viewing DOM Elements
+      const p = document.querySelector("p");
+      console.log(p); //괄호 안의 해당 엘리먼트를 보여줌
+      console.dir(dogs); //괄호 안의 해당 엘리먼트의 모든 속성들을 보여줌
+
+      // Grouping together(console.group과 console.groupEnd 사이에 새 그룹 로깅을 작성)
+      // groupCollapsed는 그룹 로깅이 접혀져서 깔끔하게 나온다.(펼칠 수 있음)
+      dogs.forEach((dog) => {
+        // console.groupCollapsed(`${dog.name}`);
+        console.group(`${dog.name}`);
+        console.log(`This is ${dog.name}`);
+        console.log(`${dog.name} is ${dog.age} years old`);
+        console.log(`${dog.name} is ${dog.age * 7} years old`);
+        console.groupEnd(`${dog.name}`);
+      });
+
+      // counting(같은 인자의 갯수를 셈)
+      console.count("hello");
+      console.count("hello");
+      console.count("hello");
+
+      console.clear();
+
+      // timing(time과 timeEnd 사이에 데이터를 받아와 타이머를 작동시키고 걸린 시간을 출력(ms))
+      console.time("fetching data");
+      fetch("https://api.github.com/users/wesbos")
+        .then((data) => data.json())
+        .then((data) => {
+          console.timeEnd("fetching data");
+          console.log(data);
+        });
+
+      //table(인자에 배열을 넣으면 배열내의 객체를 테이블의 형태로 보여줌)
+      console.table(dogs);
+    </script>
+  </body>
+</html>
