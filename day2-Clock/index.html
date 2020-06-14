@@ -5,7 +5,7 @@
     <title>JS + CSS Clock</title>
   </head>
   <body>
-    <h1>day 2 - Clock</h1>
+    <h1>Day 2 - Clock</h1>
     <div class="clock">
       <div class="clock-face">
         <div class="hand hour-hand"></div>
@@ -29,17 +29,13 @@
       body {
         margin: 0;
         font-size: 2rem;
-        display: flex;
-        flex: 1;
         min-height: 100vh;
         align-items: center;
       }
       h1 {
         color: black;
         text-shadow: 4px 0 white;
-        position: absolute;
-        top: 20px;
-        left: 585px;
+        text-align: center;
         font-size: 50px;
         font-style: italic;
         font-family: Georgia, "Times New Roman", Times, serif;
@@ -83,13 +79,8 @@
       .hour-hand {
         height: 8px;
       }
-      footer {
+      footer p {
         text-align: center;
-        position: relative;
-        top: 260px;
-        right: 790px;
-      }
-      p {
         color: white;
         font-weight: 900;
         font-size: 2rem;
