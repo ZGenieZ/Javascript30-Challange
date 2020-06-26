@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sort Without Articles</title>
+  </head>
+  <body>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        background: url("https://source.unsplash.com/nDqA4d5NL0k/2000x2000");
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      h1 {
+        margin: 0;
+        padding: 20px 0;
+        color: black;
+        text-shadow: 4px 0 gray;
+        text-align: center;
+        font-size: 50px;
+        font-style: italic;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        margin-bottom: 20px;
+      }
+
+      #bands {
+        list-style: inside square;
+        font-size: 20px;
+        background: white;
+        width: 500px;
+        margin: auto;
+        padding: 0;
+        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+      }
+
+      #bands li {
+        border-bottom: 1px solid #efefef;
+        padding: 20px;
+      }
+
+      #bands li:last-child {
+        border-bottom: 0;
+      }
+      .btn {
+        margin-top: 20px;
+      }
+      button {
+        width: 120px;
+        height: 30px;
+      }
+      a {
+        color: #ffc600;
+        text-decoration: none;
+      }
+      footer p {
+        text-align: center;
+        color: white;
+        font-weight: 900;
+        font-size: 2rem;
+      }
+    </style>
+    <div class="container">
+      <h1>Day17 - Sort Without Articles</h1>
+      <ul id="bands"></ul>
+      <div class="btn">
+        <button id="defaultBtn">기본 미정렬</button>
+        <button id="articleBtn">조사포함 정렬</button>
+        <button id="NotarticleBtn">조사미포함 정렬</button>
+      </div>
+      <footer>
+        <p><a href="../">Back to List</a></p>
+        <p><a href="https://javascript30.com/">Javascript30</a></p>
+      </footer>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
